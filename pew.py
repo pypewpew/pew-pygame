@@ -39,7 +39,7 @@ _KEYMAP = {
 def init():
     global _display, _clock, _keys
 
-    pygame.init()
+    pygame.display.init()
     _display = pygame.display.set_mode((320, 320))
     _clock = pygame.time.Clock()
     _keys = 0x00
@@ -78,7 +78,7 @@ def keys():
 
 
 def tick(delay):
-    _clock.tick(1 / delay)
+    _clock.tick(1/delay)
 
 
 class GameOver(Exception):
