@@ -54,7 +54,7 @@ def brightness(level):
 def show(pix):
     for y in range(8):
         for x in range(8):
-            pygame.draw.rect(_display, _PALETTE[pix.pixel(x, y)],
+            pygame.draw.rect(_display, _PALETTE[pix.pixel(x, y) & 0x03],
                              (x * 40 + 2, y * 40 + 2, 36, 36), 0)
     pygame.display.flip()
 
