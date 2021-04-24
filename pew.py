@@ -81,6 +81,7 @@ def keys():
 
 def tick(delay):
     _clock.tick(1/delay)
+    pygame.event.pump()
 
 
 class GameOver(Exception):
