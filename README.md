@@ -15,6 +15,9 @@ The keys of the PewPew can be emulated by the arrow keys and `x` and `z`.
 
 The emulator does not support brightness.
 
+
+You can change the display size by setting the `PEWPEW_SCALE` environment variable to an integer according to your screen resolution. If you want 4 times the initial size, set it to 4.
+
 If you want to have the autoreload-on-save functionality of the 
 physical device you can run `autoloader.py`. It will watch the file 
 `code.py` in the current folder and restart the process if the file 

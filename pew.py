@@ -1,5 +1,5 @@
 import pygame
-
+import os
 
 _PALETTE = (
     (0x00, 0x00, 0x00),
@@ -19,6 +19,8 @@ _FONT = (
 )
 _SALT = 132
 
+_DS = os.getenv("PEWPEW_SCALE") or 1
+_DS = int(_DS)
 K_X = 0x01
 K_DOWN = 0x02
 K_LEFT = 0x04
@@ -37,10 +39,10 @@ _KEYMAP = {
 
 
 def init():
-    global _display, _clock, _keys
+    global _display, _clock, _keys, _DS
 
     pygame.display.init()
-    _display = pygame.display.set_mode((320, 320))
+    _display = pygame.display.set_mode((320 * _DS, 320 * _DS))
     _clock = pygame.time.Clock()
     _keys = 0x00
 
@@ -55,7 +57,7 @@ def show(pix):
     for y in range(8):
         for x in range(8):
             pygame.draw.rect(_display, _PALETTE[pix.pixel(x, y) & 0x03],
-                             (x * 40 + 2, y * 40 + 2, 36, 36), 0)
+                             (x * 40 * _DS + 2 * _DS, y * 40 * _DS + 2 * _DS, 36 * _DS, 36 * _DS), 0)
     pygame.display.flip()
 
 
