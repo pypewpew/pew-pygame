@@ -14,3 +14,10 @@ Typically you want to start with a `code.py` that you can later copy to your har
 The keys of the PewPew can be emulated by the arrow keys and `x` and `z`.
 
 The emulator does not support brightness.
+
+If you want to have the autoreload-on-save functionality of the 
+physical device you can run `autoloader.py`. It will watch the file 
+`code.py` in the current folder and restart the process if the file 
+is saved. `autoloader.py` will accept a filename as a  
+command-line-argument, in case you want to watch and execute some  
+other file.
