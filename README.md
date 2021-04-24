@@ -7,6 +7,7 @@ git clone https://github.com/pewpew-game/pew-pygame.git
 cd pew-pygame
 python -m pip install -r requirements.txt
 ```
+Note: If you are using the Mojave version of OSX, you will probably need to install `pygame==2.0.0.dev1`.
 
 Typically you want to start with a `code.py` that you can later copy to your hardware.
 
